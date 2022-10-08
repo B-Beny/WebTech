@@ -1,0 +1,224 @@
+/* ELŐRE DEFINIÁLT SZÍNEK */
+:root
+{
+    --clr-neon: rgb(255, 20, 20);
+    --clr-bg: hsl(323 21% 16%);
+}
+
+@font-face { font-family: 'yakuza'; src: url('../font/edosz.ttf'); }
+
+body
+{
+    /*background-color: black;*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* HÁTTÉR */
+.bggames
+{
+    background-image: url("../images/yakuzagamesbg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* JÁTÉKKÁRTYÁK */
+.card
+{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    /* ÁRNYÉK */
+    box-shadow: 0 0px 64px black;
+    transition: 0.3s;
+    border-radius: 5px; /* 5px LEKEREKÍTETT SAROK */
+    width: 30em;
+    font-family: 'yakuza';
+    cursor: pointer;
+}
+  
+/* EGÉRLEBEGTETÉSNÉL ÁRNYÉK */
+.card:hover
+{
+    box-shadow: 0px 0px 64px var(--clr-neon);
+}
+ 
+/* KÁRTYÁN BELÜLI KITÖLTÉS */
+.container
+{
+    padding: 2px 16px;
+}
+
+/* LEKEREKÍTETT SARKOK A KÉP TETEJÉN */
+img
+{
+    border-radius: 5px 5px 0 0;
+}
+
+/* TÁBLÁZAT FORMÁZÁS */
+th, td
+{
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* HIVATKOZÁSOK */
+a:link
+{
+    text-decoration: none;
+    color: var(--clr-neon);
+    font-family: 'yakuza';
+}
+
+a:visited
+{         
+    text-decoration: none;
+    color: var(--clr-neon)
+}
+
+a:hover
+{
+    text-decoration: none;
+    color: var(--clr-bg)
+}
+/* HIVATKOZÁSOK VÉGE */
+
+/* NEON GOMBOK KEZDETE */
+.neon-button
+{
+    font-size: 2rem;
+  
+    top: 0.4em;
+    left: 0.4em;
+    text-align: center;
+    display: inline-block;
+    width: 5em;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.35em 1em;
+    border-radius: 0.25em;
+  
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+  
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+  
+    position: relative;
+}
+  
+.neon-button::before
+{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--clr-neon);
+}
+
+.neon-button::after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-neon);
+    opacity: 0;
+    background-color: var(--clr-neon);
+    z-index: -1;
+    transition: opacity 100ms linear;
+}
+  
+.neon-button:hover,
+.neon-button:focus
+{
+    color: var(--clr-bg);
+    text-shadow: none;
+}
+  
+.neon-button:hover::before,
+.neon-button:focus::before
+{
+    opacity: 1;
+}
+
+.neon-button:hover::after,
+.neon-button:focus::after
+{
+    opacity: 1;
+}
+/*NEON GOMBOK VÉGE*/
+
+/* POPUP */
+.popup .overlay
+{
+    cursor: pointer;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content
+{
+    font-family: 'yakuza';
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    box-shadow: 0 0px 64px black;
+    border-radius: 5px ;
+    background: #fff;
+    width: 100em;
+    height: 50ex;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup .close-btn
+{
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup.active .overlay
+{
+    display: block;
+}
+
+.popup.active .content
+{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* COPYRIGHT FELIRAT */
+.copyright
+{
+    position:static;
+    right: 0.4em;
+    bottom: 0.4em;
+    color: white;
+    font-size: 125%
+}
