@@ -1,0 +1,128 @@
+<HTML>
+
+    <HEAD>
+        <meta charset="UTF-8">
+        <TITLE>Yakuza</TITLE>
+        <link rel="stylesheet" href="css/games.css">
+        <!-- <script src="javascript/html-include.js" type="text/javascript"></script> -->
+    </HEAD>
+    
+    <BODY class="bggames">
+
+        <!-- <div><html-include src="menu.html"></html-include></div> -->
+
+        <a href="mainpage.html"><div class="neon-button">Back</div></a>
+
+        <table style="width:100%;">
+
+            <!-- <tr>
+                <th colspan="2" style="font-family:yakuza;color:white;font-size:250%;">
+                    <dialog>
+                        <b style="font-size: 300%;color:red">DISCLAIMER!</b><br>
+                        These aren't all of the Yakuza games, only the ones I played through.
+                    </dialog>
+                </th>
+            </tr> -->
+
+            <tr>
+                
+                <td>
+                    <div class="card" onclick="togglePopup()">
+                        <img src="images/yakuza0.jpg" alt="Yakuza 0" style="width:100%">
+                        <div class="container">
+                        <h1><b>Yakuza 0</b></h1>
+                        </div>
+                    </div>
+                </td>
+                
+                <div class="popup" id="y0pop">
+                    <div class="overlay" onclick="togglePopup()"></div>
+                    <div class="content">
+                        <div class="close-btn" onclick="togglePopup()">X</div>
+                        <section>
+                        <video controls loop width="1000" height="800">
+                            <source src="videos/yakuza0.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video> 
+                        </section>
+                        <h1>popup</h1>
+                        <p>fasz</p>
+                    </div>
+                </div>
+
+                <td>
+                    <div class="card">
+                        <img src="images/yakuzakiwami.jpeg" alt="Yakuza Kiwami" style="width:100%">
+                        <div class="container">
+                        <h1><b>Yakuza Kiwami</b></h1>
+                        </div>
+                    </div>
+                </td>
+            </tr> 
+
+            <tr>
+                <td>
+                    <div class="card">
+                        <img src="images/yakuzakiwami2.jpeg" alt="Yakuza Kiwami 2" style="width:100%">
+                        <div class="container">
+                        <h1><b>Yakuza Kiwami 2</b></h1>
+                        </div>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="card">
+                        <img src="images/yakuza3.jpg" alt="Yakuza 3 Remastered" style="width:100%">
+                        <div class="container">
+                        <h1><b>Yakuza 3 Remastered</b></h1>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="card">
+                        <img src="images/yakuza4.jpg" alt="Yakuza 4 Remastered" style="width:100%">
+                        <div class="container">
+                        <h1><b>Yakuza 4 Remastered</b></h1>
+                        </div>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="card">
+                        <img src="images/yakuza5.jpg" alt="Yakuza 5 Remastered" style="width:100%">
+                        <div class="container">
+                        <h1><b>Yakuza 5 Remastered</b></h1>
+                        </div>
+                    </div>
+                </td>
+            </tr> 
+
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <div class="card">
+                        <img src="images/yakuza6.jpg" alt="Yakuza 6 The Song of Life" style="width:100%">
+                        <div class="container">
+                        <h1><b>Yakuza 6 The Song of Life</b></h1>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+        <div class="copyright" style="text-align: right;">©2022 SEGA</div>
+    
+
+        <script>
+            function togglePopup()
+            {
+                document.getElementById("y0pop").classList.toggle("active");
+            }
+        </script>
+
+    </BODY>
+    
+</HTML>
