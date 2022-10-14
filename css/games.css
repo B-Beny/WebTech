@@ -5,6 +5,7 @@
     --clr-bg: hsl(323 21% 16%);
 }
 
+/* SAJÁT BETŰTÍPUS */
 @font-face { font-family: 'yakuza'; src: url('../font/edosz.ttf'); }
 
 body
@@ -169,18 +170,21 @@ a:hover
 
 .popup .content
 {
+    display: block;
     font-family: 'yakuza';
     position:absolute;
+    margin-top: 27em;
     top: 50%;
     left: 50%;
+    transition: all 300ms ease-in-out;
     transform: translate(-50%, -50%) scale(0);
     box-shadow: 0 0px 64px black;
     border-radius: 5px ;
     background: #fff;
     width: 100em;
-    height: 50ex;
+    height: 110em;
     z-index: 2;
-    text-align: center;
+    text-align: left;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -200,6 +204,7 @@ a:hover
     line-height: 30px;
     text-align: center;
     border-radius: 50%;
+    z-index: 3;
 }
 
 .popup.active .overlay
@@ -208,6 +213,75 @@ a:hover
 }
 
 .popup.active .content
+{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup .video
+{
+    margin-top: -1.19em;
+    margin-left: -1.2em;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* DISCLAIMER */
+.disclaimer .overlay
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.disclaimer .content
+{
+    display: block;
+    font-family: 'yakuza';
+    position:fixed;
+    margin-top: 20em;
+    left: 50%;
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    box-shadow: 0 0px 64px black;
+    border-radius: 30px ;
+    background: #fff;
+    width: 70em;
+    height: 33em;
+    z-index: 2;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.disclaimer .close-btn
+{
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.disclaimer.active .overlay
+{
+    display: block;
+}
+
+.disclaimer.active .content
 {
     transition: all 300ms ease-in-out;
     transform: translate(-50%, -50%) scale(1);

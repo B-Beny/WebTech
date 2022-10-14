@@ -1,33 +1,39 @@
+<!DOCTYPE html>
 <HTML>
 
     <HEAD>
         <meta charset="UTF-8">
         <TITLE>Yakuza</TITLE>
         <link rel="stylesheet" href="css/games.css">
-        <!-- <script src="javascript/html-include.js" type="text/javascript"></script> -->
+        <link rel="icon" href="images/yakuzaicon.png" type="image/icon type">
+        <script defer src="javascript/games.js" type="text/javascript"></script>
     </HEAD>
     
     <BODY class="bggames">
-
-        <!-- <div><html-include src="menu.html"></html-include></div> -->
 
         <a href="mainpage.html"><div class="neon-button">Back</div></a>
 
         <table style="width:100%;">
 
-            <!-- <tr>
-                <th colspan="2" style="font-family:yakuza;color:white;font-size:250%;">
-                    <dialog>
-                        <b style="font-size: 300%;color:red">DISCLAIMER!</b><br>
-                        These aren't all of the Yakuza games, only the ones I played through.
-                    </dialog>
-                </th>
-            </tr> -->
+            <div class="disclaimer" id="disclaimer">
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="close-btn" id="disclaimerclsbtn">X</div>
+                    <h1 style="font-size: 500%; text-align: center; color: red;">Disclaimer!</h1>
+                    <p style="font-size: 225%;  text-align: center;">
+                        This type of content is not appropriate for all ages!<br>
+                        All games are marked as 'M' for Mature audience!<br>
+                        The trailers contain gore, blood, intense violence, partial nudity, sexual themes and more!<br><br>
+                        Also these are not all of the Yakuza games,<br>
+                        Only the ones that I've played through.
+                    </p>
+                </div>
+            </div>
 
             <tr>
                 
                 <td>
-                    <div class="card" onclick="togglePopup()">
+                    <div class="card" id="y0card">
                         <img src="images/yakuza0.jpg" alt="Yakuza 0" style="width:100%">
                         <div class="container">
                         <h1><b>Yakuza 0</b></h1>
@@ -36,45 +42,108 @@
                 </td>
                 
                 <div class="popup" id="y0pop">
-                    <div class="overlay" onclick="togglePopup()"></div>
+                    <div class="overlay" id="y0overlay"></div>
                     <div class="content">
-                        <div class="close-btn" onclick="togglePopup()">X</div>
-                        <section>
-                        <video controls loop width="1000" height="800">
+                        <div class="close-btn" id="y0clsbtn">X</div>
+                        <section class="video">
+                        <video controls loop width="1600" height="900" id="y0vid">
                             <source src="videos/yakuza0.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                           </video> 
                         </section>
-                        <h1>popup</h1>
-                        <p>fasz</p>
+                        <h1 style="font-size:500%;">Yakuza 0</h1>
+                        <p style="font-size: 225%;">December 1988 - Japan<br>
+                            The winter was chilly but electric in Kamurocho, the premier entertainment district in the east. Here, money buys luxury, and luxury is a way of life. With the nation's economy at the height of a boom, the people of Kamurocho believed that nothing they could wish for was out of reach. But there are some places where money only goes so far.<br>
+                            A vacant lot. A humble square of concrete and weeds, hardly the size of a parking space.<br>
+                            The Kamurocho 21st Century Revitalization Project is underway, and to own the land is to hold the power. Whoever can obtain the final piece in the puzzle, this tiny patch of ground, will have the leverage to change the balance of the city and spearhead a mammoth commercial property known as the Millennium Tower. Two men are flung into a conflict they do not yet comprehend. Those in power have every intent of burying them in this sea of change, unaware that they were setting events into motion that would give birth to legends.</p>
                     </div>
                 </div>
 
                 <td>
-                    <div class="card">
+                    <div class="card" id="yk1card">
                         <img src="images/yakuzakiwami.jpeg" alt="Yakuza Kiwami" style="width:100%">
                         <div class="container">
                         <h1><b>Yakuza Kiwami</b></h1>
                         </div>
                     </div>
                 </td>
+
+                <div class="popup" id="yk1pop">
+                    <div class="overlay" id="yk1overlay"></div>
+                    <div class="content">
+                        <div class="close-btn" id="yk1clsbtn">X</div>
+                        <section class="video">
+                        <video controls loop width="1600" height="900" id="yk1vid">
+                            <source src="videos/yakuzak1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video> 
+                        </section>
+                        <h1 style="font-size:500%;">Yakuza Kiwami</h1>
+                        <p style="font-size: 225%;">
+                            The year is 1995, and Kazuma Kiryu, the Dragon of Dojima, is an up-and-coming yakuza. A Lieutenant Advisor in the Tojo Clan's Dojima Family, his hard work has nearly earned him his own sub-family in this prestigious group.<br>
+                            But one rainy night, the unthinkable happens. Sohei Dojima, Patriarch of the Dojima Family, kidnaps Kiryu's childhood friend, Yumi. In an effort to save her, Kiryu's sworn brother, Akira Nishikiyama, rushes after them.<br>
+                            As the thunder claps, gunshots ring out from the Dojima Family office. Kiryu arrives to find Nishikiyama holding the smoking gun over Dojima's dead body, and Yumi in shock from the trauma.<br>
+                            Kiryu makes a decision that will change his life forever. Sending Nishikiyama out of the room to look after Yumi, Kiryu picks up the gun as the police arrive to arrest the culprit...<br>
+                            The year is 2005. Akira Nishikiyama has become a changed man. Yumi is nowhere to be found. Ten billion yen has gone missing from the Tojo Clan's coffers, putting the organization on the brink of civil war. And Kazuma Kiryu is released from prison to a world he no longer recognizes.
+                        </p>
+                    </div>
+                </div>
+
             </tr> 
 
             <tr>
                 <td>
-                    <div class="card">
+                    <div class="card" id="yk2card">
                         <img src="images/yakuzakiwami2.jpeg" alt="Yakuza Kiwami 2" style="width:100%">
                         <div class="container">
                         <h1><b>Yakuza Kiwami 2</b></h1>
                         </div>
                     </div>
+
+                    <div class="popup" id="yk2pop">
+                        <div class="overlay" id="yk2overlay"></div>
+                        <div class="content">
+                            <div class="close-btn" id="yk2clsbtn">X</div>
+                            <section class="video">
+                            <video controls loop width="1600" height="900" id="yk2vid">
+                                <source src="videos/yakuzak2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                              </video> 
+                            </section>
+                            <h1 style="font-size:500%;">Yakuza Kiwami 2</h1>
+                            <p style="font-size: 225%;">
+                                Kazuma Kiryu thought his Tojo Clan days were behind him. He and his young ward, Haruka Sawamura, have built a peaceful life from the ashes of conflict. All it took was a single gunshot to shatter that peace. Yukio Terada, the fifth chairman of the Tojo Clan, has been assassinated. With war on the horizon, the legendary Dragon of Dojima is pulled back into the world he wanted to leave behind.<br>
+                                With the Tojo Clan weakened from the events of 2005 and on the brink of war with the Omi Alliance, Kiryu himself journeys to Kansai to broker peace. But in Sotenbori, the Dragon of Kansai, Ryuji Goda, sees an opportunity: Destroy the Tojo Clan, destroy Kiryu, and become the one true dragon.<br>
+                                As a power struggle begins between east and west, a tragedy buried for over 20 years boils to the surface, shaking the very foundation of both organizations.<br>
+                                What fate awaits Kazuma Kiryu? What dark truths will be illuminated? And when two dragons have clashed, and the ashes settle over Kamurocho, who will be left standing?
+                            </p>
+                        </div>
+                    </div>
                 </td>
 
                 <td>
-                    <div class="card">
+                    <div class="card" id="y3card">
                         <img src="images/yakuza3.jpg" alt="Yakuza 3 Remastered" style="width:100%">
                         <div class="container">
                         <h1><b>Yakuza 3 Remastered</b></h1>
+                        </div>
+                    </div>
+
+                    <div class="popup" id="y3pop">
+                        <div class="overlay" id="y3overlay"></div>
+                        <div class="content">
+                            <div class="close-btn" id="y3clsbtn">X</div>
+                            <section class="video">
+                            <video controls loop width="1600" height="900" id="y3vid">
+                                <source src="videos/yakuza3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                              </video> 
+                            </section>
+                            <h1 style="font-size:500%;">Yakuza 3 Remastered</h1>
+                            <p style="font-size: 225%;">
+                                The year 2009, Japan. With Kamurocho, Tokyo, and Okinawa as the stage, a dynamic and dramatic story of politics, the underworld, rights, and schemes unfolds. A masterpiece of adult entertainment presented by an extravagant cast!<br><br>
+                                The people and the buildings, even the unique air of the cities, will be depicted. At times heart warming, and at times heart wrenching, experience the various dramas that unfold in the big city and the southern lands!
+                            </p>
                         </div>
                     </div>
                 </td>
@@ -82,19 +151,60 @@
 
             <tr>
                 <td>
-                    <div class="card">
+                    <div class="card" id="y4card">
                         <img src="images/yakuza4.jpg" alt="Yakuza 4 Remastered" style="width:100%">
                         <div class="container">
                         <h1><b>Yakuza 4 Remastered</b></h1>
                         </div>
                     </div>
+
+                    <div class="popup" id="y4pop">
+                        <div class="overlay" id="y4overlay"></div>
+                        <div class="content">
+                            <div class="close-btn" id="y4clsbtn">X</div>
+                            <section class="video">
+                            <video controls loop width="1600" height="900" id="y4vid">
+                                <source src="videos/yakuza4.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                              </video> 
+                            </section>
+                            <h1 style="font-size:500%;">Yakuza 4 Remastered</h1>
+                            <p style="font-size: 225%;">
+                                It is the year 2010 in Kamurocho, Tokyo.<br><br>
+                                One night in this quarter of pleasure, among the swirls of human greed and conflict, a shooting occurs. In this town, it would have been a night like any other…<br><br>
+                                Except this night, a woman appeared.<br><br>
+                                This is a story of the overlapping fates of four men, and the miracle that their violent and passionate lifestyles give birth to.<br><br>
+                                A first for the series, the original game featured a story drawn from the perspectives of four protagonists. When these men of powerful conviction gathered together, a new legend was born in Kamurocho.
+                            </p>
+                        </div>
+                    </div>
                 </td>
 
                 <td>
-                    <div class="card">
+                    <div class="card" id="y5card">
                         <img src="images/yakuza5.jpg" alt="Yakuza 5 Remastered" style="width:100%">
                         <div class="container">
                         <h1><b>Yakuza 5 Remastered</b></h1>
+                        </div>
+                    </div>
+
+                    <div class="popup" id="y5pop">
+                        <div class="overlay" id="y5overlay"></div>
+                        <div class="content">
+                            <div class="close-btn" id="y5clsbtn">X</div>
+                            <section class="video">
+                            <video controls loop width="1600" height="900" id="y5vid">
+                                <source src="videos/yakuza5.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                              </video> 
+                            </section>
+                            <h1 style="font-size:500%;">Yakuza 5 Remastered</h1>
+                            <p style="font-size: 225%;">
+                                It is December 2012, and Kazuma Kiryu has found himself a peaceful new life as a taxi driver in Fukuoka.<br><br>
+                                Having hidden his past from the world, he now works day and night to help fulfill the dream of someone he holds dear. But all is not well, as rising tensions in the Tojo Clan foretell of an all-out war between the yakuza of the east and those of the west.<br><br>
+                                Will the Legendary Dragon of Dojima rise once again to save an old friend from imminent danger?<br><br>
+                                A grand tale of five cities begins, and the lives of four brave men and one stout-hearted girl will never be the same.
+                            </p>
                         </div>
                     </div>
                 </td>
@@ -102,10 +212,36 @@
 
             <tr>
                 <td colspan="2" style="text-align:center;">
-                    <div class="card">
+                    <div class="card" id="y6card">
                         <img src="images/yakuza6.jpg" alt="Yakuza 6 The Song of Life" style="width:100%">
                         <div class="container">
                         <h1><b>Yakuza 6 The Song of Life</b></h1>
+                        </div>
+                    </div>
+
+                    <div class="popup" id="y6pop">
+                        <div class="overlay" id="y6overlay"></div>
+                        <div class="content">
+                            <div class="close-btn" id="y6clsbtn">X</div>
+                            <section class="video">
+                            <video controls loop width="1600" height="900" id="y6vid">
+                                <source src="videos/yakuza6.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                              </video> 
+                            </section>
+                            <h1 style="font-size:500%;">Yakuza 6 The Song Of Life</h1>
+                            <p style="font-size: 225%;">
+                                A snowy night in 2012...<br>
+                                More than a million fans watching a concert<br>
+                                were shocked by an idol's sudden confession:<br><br>
+                                "Kazuma Kiryu is my family."<br><br>
+                                In that moment, an idol became human again.<br>
+                                For Haruka Sawamura, the dream had changed.<br><br>
+                                Meanwhile, Kazuma Kiryu, the Dragon of Dojima,<br>
+                                has just put a decisive end to the yakuza's war of five cities.<br><br>
+                                The snow fell gently as Kiryu and Haruka reunited.<br>
+                                It should have been the beginning of simpler times...<br>
+                            </p>
                         </div>
                     </div>
                 </td>
@@ -113,15 +249,7 @@
 
         </table>
 
-        <div class="copyright" style="text-align: right;">©2022 SEGA</div>
-    
-
-        <script>
-            function togglePopup()
-            {
-                document.getElementById("y0pop").classList.toggle("active");
-            }
-        </script>
+        <div class="copyright" style="text-align: right;">©SEGA</div>
 
     </BODY>
     

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<HTML>
+
+    <HEAD>
+        <meta charset="UTF-8">
+        <title>Comments</title>
+        <link rel="stylesheet" href="css/comments.css">
+        <link rel="icon" href="images/yakuzaicon.png" type="image/icon type">
+        <script defer src="javascript/comments.js" type="text/javascript"></script>
+
+    </HEAD>
+
+    <BODY class="bgmain">
+
+        <div id="blocker" class="modalDialog">
+            <div class="clsbtn" id="clsbtn"></div>
+            <div class="content">
+                <h1 class="modalText">In the name of the law stop right there!<br>
+                    Comments can be very harmful as we know,<br>
+                    that's why we gotta ask if you're old enough,<br>
+                    so that you don't go and cry in the corner.<br><br>
+                </h1>
+                <h2 class="modalText">
+                    Please enter your birthday:
+                </h2>
+                <input type="date" class="date" id="date"><br>
+                <button class="sbutton" type="submit" onclick="ageVerify()">Submit</button>
+            </div>
+        </div>
+
+        <a href="mainpage.html"><div class="neon-button">Back</div></a>
+
+        <section>
+            <div class="card">
+                <div class="commentscard" id="commentsection"></div>
+                <div class="comment">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                Name: <br>
+                                <input type ="text" id="name"  placeholder="Write your name..." style="width: 50%;">
+                            </td>
+                            <td>
+                            	Choose a color: <br>
+                                <input type="color" id="color" style="cursor: pointer;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                            Comment: <br>
+                            <textarea type ="text" id="comment" placeholder="Type a comment..." style="width: 100%; font-size: 100%; resize: none;"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:70%;">
+                                <input type="checkbox" id="checkboxid" style="cursor: pointer;">  I agree to the non-existent <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><u style="font-family:Times-New-Roman;">Terms Of Service</u></a>.<br>
+                            </td>
+                            <td style="text-align:center;">
+                                <button class="button" type="submit" id="post" onclick="newComment()" style="cursor: pointer;">
+                                    Send
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <div class="copyright" style="text-align: right;">©SEGA</div>
+
+    </BODY>
+
+</HTML>
